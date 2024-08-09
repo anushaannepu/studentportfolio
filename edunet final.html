@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: blue;
+            color: white;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: green;
+        }
+
+        #gallery {
+            background: url('gallery-image.jpg') no-repeat center center/cover;
+            border-radius: 10px;
+            box-shadow: 14px 14px 14px rgb(122,146,122);
+            color: black;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        #gallery h3 {
+            font-size: 3em;
+        }
+
+        #gallery p {
+            font-size: 1.5em;
+        }
+
+        button {
+            background-color: rgb(91,91,147);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: green;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .project-card {
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0 4px 4px rgb(174,90,90);
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+            width: calc(33% - 40px);
+            vertical-align: top;
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        #about, #skills {
+            width: 70%;
+            margin: 40px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 4px rgb(122,146,122);
+        }
+
+        #about {
+            background-color: rgb(251, 121, 123);
+        }
+
+        #skills {
+            background-color: #f4f4f4;
+        }
+
+        #skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #skills ul li {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        #projects-table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        #projects-table th, #projects-table td {
+            border: 1px solid #ff6666;
+            padding: 8px;
+        }
+
+        #projects-table th {
+            background-color: #ff9999;
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-card {
+                width: calc(100% - 40px);
+            }
+        
+		#contact{
+    background-color: rgb(156, 118, 136);
+    margin:10px 20px 2px 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    border-radius: 50px;
+	onclick="toggleDarkMode()" type="button">Dark Mode</button>
+  }  
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="gallery">
+        <h4>Welcome to my portfolio</h4>
+        <img src="https://tse1.mm.bing.net/th?id=OIP.yir0s_y4ZBciy9TQFvkPRgHaE8&pid=Api&P=0&h=180" alt="Gallery Image">
+        <p><marquee>Hi, I'm Anusha, a passionate frontend developer.</marquee></p>
+        <button onclick="scrollToSection('about')">Learn More</button>
+    </section>
+
+    <section id="about">
+        <h2><u>About Me</u></h2>
+        <p>I am Anusha currently pursuing my B.Tech third year in cse background from SRM AP University.I have a deep passion for technology and enjoy exploring different aspects</p>
+        <p>From coding in languages to tackling challenging projects, I immerse myself fully in my studies.</p>
+        <p>Each line of code and every project I undertake is an opportunity to learn and grow. One of the things that define me is my dedication.</p>
+		<p> I am always on the lookout for new challenges that can help me enhance my skills and knowledge.</p>
+    </section>
+
+    <section id="skills">
+        <h2><u>Skills</u></h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>C++</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2><u>Projects</u></h2>
+        <table id="projects-table">
+            <tr>
+                <th>Project Name</th>
+                <th>Description</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>Coffee Management</td>
+                <td>It features a menu displaying various coffee items with images, descriptions, and an "Add to Cart" button for each item. Users can add items to their cart and proceed to checkout, with the cart dynamically updating to reflect their selections.</td>
+                <td><a href="file:///C:/Users/anush/OneDrive/Documents/coffee.html" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Booking Sphere</td>
+                <td>It is about booking a seat in train, flight, or bus. According to our preferences, we can reserve as many seats as we want.</td>
+                <td><a href="C:/Users/anush/Downloads/cpop.pdf" target="_blank">View Project</a></td>
+            </tr>
+            <tr>
+                <td>Trivia Titan</td>
+                <td>QuizMaster is a cutting-edge online platform designed to revolutionize the way quizzes and assessments are delivered and experienced. With its user-friendly interface and powerful features, it aims to provide an immersive and engaging learning environment for students and teachers.</td>
+                <td><a href="https://1drv.ms/w/s!AplgpCf_G5dzhXTAz53isfdOlRe4?e=QetKis" target="_blank">View Project</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h2><u>Contact</u></h2>
+        <div style="width: 55%;">
+        <form id="contactForm" action="file:///C:/Users/anush/OneDrive/Documents/submission.html" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="" required><br>
+            
+            <label for="email">Mail ID: </label>
+            <input type="email" id="email" name="email" placeholder="" required><br>
+            
+            <label for="number">Ph NO: </label>
+            <input type="text" id="number" name="number" placeholder="" required><br>
+            
+            <label for="sugg">Suggestions:</label>
+            <textarea id="sugg" name="sugg" placeholder="" required></textarea><br>
+            
+            <button type="submit">SUBMIT</button>
+			
+        </form>
+        </div>
+        <p>If you'd like to get in touch, feel free to send me an email at <a href="mailto:anusha.08072004@gmail.com">anusha.08072004@gmail.com</a>.</p>
+        <p>You can also connect through my LinkedIn profile: <a href="https://www.linkedin.com/in/anusha-a-6a506b255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Anusha. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+   function scrollToSection(sectionId) {
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    }
+
+
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var phoneNo = document.getElementById("number").value;
+        var email = document.getElementById("email").value;
+        
+        var namePattern = /^[A-Za-z ]+$/;
+        var phonePattern = /^[0-9]{10}$/;
+        
+        var isValid = true;
+        var errorMessages = [];
+
+        if (!namePattern.test(name)) {
+            isValid = false;
+            errorMessages.push("Name should contain alphabets or spaces only.");
+        }
+        if (!phonePattern.test(phoneNo)) {
+            isValid = false;
+            errorMessages.push("Number should contain 10 digits only.");
+        }
+
+        if (!isValid) {
+            alert(errorMessages.join("\n"));
+        }
+
+        return isValid;
+    }
+        
+    </script>
+</body>
+</html>
